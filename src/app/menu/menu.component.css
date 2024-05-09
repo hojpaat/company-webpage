@@ -1,0 +1,46 @@
+.container{
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon{
+    font-size: 30px;
+    color: #1D4E89;
+    font-family: Courier, monospace, Arial, sans-serif;
+    text-align: center;
+}
+
+a{
+    font-size: 100px;
+    color: #1D4E89;
+}
+
+.active, .active a{
+    color: #00B2CA;
+}
+
+.icon:hover, a:hover{
+    color:#F79256 !important;
+}
+
+.small {
+    height: 200px;
+    font-size: 15px;
+    justify-content: end;
+    align-items: baseline;
+}
+
+.small .icon{
+    font-size: 15px;
+    margin: 5px;
+}
+
+.small a {
+    font-size: 25px;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,18 @@
+<div class="container" [ngClass]="{'small': isSmall}"   (click)="updateIsSmall()">
+    <div class="icon" [ngClass]="{'hidden': !isSmall}" [routerLinkActive]="'active'">
+        <a [routerLink]="'home'" alt="home"><i class="bi bi-house-fill"></i></a>
+        <p class="label">Home</p>
+      </div>
+    <div class="icon" [routerLinkActive]="'active'">
+      <a [routerLink]="'services'" alt="services"><i class="bi bi-droplet-half"></i></a>
+      <p class="label">Services</p>
+    </div>
+    <div class="icon" [routerLinkActive]="'active'">
+      <a [routerLink]="'gallery'" alt="gallery"><i class="bi bi-images"></i></a>
+      <p class="label">Gallery</p>
+    </div>
+    <div class="icon" [routerLinkActive]="'active'">
+      <a [routerLink]="'contact'" alt="contact"><i class="bi bi-envelope-check-fill"></i></a>
+      <p class="label">Contact</p>
+    </div>
+</div>
