@@ -4,5 +4,34 @@
 }
 
 .container{
-    height: 400px;
+    height: 800px;
 }
+
+
+body {
+    --sb-track-color: #f3efef;
+    --sb-thumb-color: #00b2ca;
+    --sb-size: 14px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 16px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 16px;
+    border: 1px solid #1d4e89;
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }

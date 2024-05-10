@@ -13,17 +13,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { MenuComponent } from './menu/menu.component';
 
-// Define routes
-const routes: Routes = [
-  {path: "", redirectTo: "home", pathMatch: "full"},
-  {path: "home", component: MainComponent},
-  {path: "services", component: ServicesPageComponent},
-  {path: "gallery", component: GalleryComponent},
-  {path: "contact", component: ContactComponent}
-  // {path: "**", component: ErrorPageComponent}
-
-
-] 
+ 
 
 @NgModule({
   declarations: [
@@ -39,8 +29,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

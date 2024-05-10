@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,15 +8,34 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
 
-  isSmall = false;
-  router: Router = inject(Router);
+  activeMenu: string = '';
+  isHomePage: boolean = true;
+  isServiceActive: boolean = false;
+  isGalleryActive: boolean = false;
+  isContactActive: boolean = false;
 
   ngOnInit(){
-    this.updateIsSmall();
   }
 
-  updateIsSmall() {
-    this.isSmall = !(this.router.url == "/home" || this.router.url == "/");
+  updateActiveMenu(s: string) {
+    switch(s) {
+      case "services":
+        this.isServiceActive = true;
+        this.isContactActive = false;
+        this.isGalleryActive = false;
+        break;
+      case "gallery":
+        this.isServiceActive = false;
+        this.isContactActive = false;
+        this.isGalleryActive = true;
+        break;
+      case "contact":
+        this.isServiceActive = false;
+        this.isContactActive = true;
+        this.isGalleryActive = false;
+        break;
+    }
+    this.isHomePage = false;
   }
 
 }

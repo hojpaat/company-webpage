@@ -1,0 +1,47 @@
+.card{
+    border: solid 2px #7DCFB6;
+    border-radius: 50px 0px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.panel-container{
+    max-height: 500px;
+    overflow-y: scroll;
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.title {
+    padding: 25px;
+
+}
+
+
+.panel-container {
+    --sb-track-color: #f3efef;
+    --sb-thumb-color: #00b2ca;
+    --sb-size: 14px;
+  }
+  
+  .panel-container::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  .panel-container::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 16px;
+  }
+  
+  .panel-container::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 16px;
+    border: 1px solid #1d4e89;
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    .panel-container {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
